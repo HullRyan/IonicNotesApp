@@ -8,7 +8,8 @@ const routes: Routes = [
   },
   {
     path: '', 
-    loadChildren: () => import('./pages/notes-list/notes-list.module').then( m => m.NotesListPageModule)
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'note',
@@ -17,6 +18,15 @@ const routes: Routes = [
   {
     path: 'note/:id',
     loadChildren: () => import('./pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'login',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
 ];
 

@@ -1,3 +1,4 @@
+import { AuthenticateService, User } from './authenticate.service';
 import { NotesListPage } from './../pages/notes-list/notes-list.page';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentReference } from '@angular/fire/firestore';
@@ -6,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Timestamp } from 'rxjs/internal/operators/timestamp';
 import { promise } from 'selenium-webdriver';
 import { identifierName } from '@angular/compiler';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 export interface Note {
   id?: string,
@@ -23,8 +25,18 @@ export class NoteService {
   private notes: Observable<Note[]>;
   private noteCollection: AngularFirestoreCollection<Note>;
 
-  constructor(private firestore: AngularFirestore) { 
-    this.noteCollection = this.firestore.collection<Note>('notes', 
+  constructor(private firestore: AngularFirestore, 
+              private afAuth: AngularFireAuth,
+              private authenticateService: AuthenticateService) {
+    let currentUser = this.authenticateService.getCurrentUser();
+    
+    if(currentUser) {
+      this.refreshNotesCollection(currentUser.uid)
+    }
+  }
+
+  refreshNotesCollection(userId) {
+    this.noteCollection = this.firestore.collection('users').doc(userId).collection<Note>('notes', 
     ref => ref.orderBy('createdOn', 'desc'));
     this.notes = this.noteCollection.snapshotChanges().pipe(
       map(actions => {

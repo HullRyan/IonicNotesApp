@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
@@ -20,7 +21,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase),
-  AngularFirestoreModule],
+  AngularFirestoreModule, AngularFireAuthModule],
   providers: [
     StatusBar, 
     SplashScreen,
