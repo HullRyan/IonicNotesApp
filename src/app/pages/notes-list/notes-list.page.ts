@@ -1,3 +1,4 @@
+import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { NoteService, Note } from './../../services/note.service';
 import { Component, OnInit } from '@angular/core';

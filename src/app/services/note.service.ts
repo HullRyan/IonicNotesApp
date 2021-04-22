@@ -24,7 +24,8 @@ export class NoteService {
   private noteCollection: AngularFirestoreCollection<Note>;
 
   constructor(private firestore: AngularFirestore) { 
-    this.noteCollection = this.firestore.collection<Note>('notes');
+    this.noteCollection = this.firestore.collection<Note>('notes', 
+    ref => ref.orderBy('createdOn', 'desc'));
     this.notes = this.noteCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {

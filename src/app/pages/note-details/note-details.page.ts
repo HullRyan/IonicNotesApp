@@ -67,4 +67,8 @@ export class NoteDetailsPage implements OnInit {
       duration: 2000
     }).then(toast => toast.present());
   }
+
+  scheduleNoteReminder(){
+    this.note.id
+  }
 }

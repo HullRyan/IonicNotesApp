@@ -1,19 +1,20 @@
-import { LocalNotifications, ELocalNotificationTriggerUnit  } from '@ionic-native/local-notifications';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { ELocalNotificationTriggerUnit } from '@ionic-native/local-notifications';
 import { Injectable } from '@angular/core';
 
-export interface notifcation {
+/*export interface notifcation {
   alert_id: number
-}
+}*/
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class NotificationService {
 
-  constructor(private localNotifications: typeof LocalNotifications) { }
+  constructor(private localNotifications:  LocalNotifications) { }
 
   setSingleNotification(message: string, time: number, alert_id: number){
-    
     this.localNotifications.schedule({
       id: alert_id,
       text: "Hey, looks like its time to work on " + message + 
