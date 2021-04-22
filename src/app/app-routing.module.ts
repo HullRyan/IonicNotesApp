@@ -7,9 +7,16 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: '', 
+    loadChildren: () => import('./pages/notes-list/notes-list.module').then( m => m.NotesListPageModule)
+  },
+  {
+    path: 'note',
+    loadChildren: () => import('./pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
+  },
+  {
+    path: 'note/:id',
+    loadChildren: () => import('./pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
   },
 ];
 

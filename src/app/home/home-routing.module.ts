@@ -4,8 +4,16 @@ import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomePage,
+    path: '', 
+    loadChildren: () => import('../pages/notes-list/notes-list.module').then( m => m.NotesListPageModule)
+  },
+  {
+    path: 'note',
+    loadChildren: () => import('../pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
+  },
+  {
+    path: 'note/:id',
+    loadChildren: () => import('../pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
   }
 ];
 
