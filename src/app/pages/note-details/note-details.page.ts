@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NoteService, Note } from 'src/app/services/note.service';
+import { NotificationService } from 'src/app/services/notification.service';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -19,7 +20,8 @@ export class NoteDetailsPage implements OnInit {
   }
 
   constructor(private activatedRoute: ActivatedRoute, private noteService: NoteService,
-    private toastCtrl: ToastController, private router: Router) { }
+    private toastCtrl: ToastController, private router: Router, 
+    private notificationService: NotificationService) { }
 
   ngOnInit() {
   }

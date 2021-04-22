@@ -13,6 +13,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
 
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,7 +23,7 @@ import { AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
   AngularFirestoreModule],
   providers: [
     StatusBar, 
-    SplashScreen, 
+    SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
     { provide: SETTINGS, useValue: {} }
   ],
