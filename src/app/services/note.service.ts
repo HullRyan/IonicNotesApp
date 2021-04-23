@@ -32,6 +32,7 @@ export class NoteService {
     
     if(currentUser) {
       this.refreshNotesCollection(currentUser.uid)
+      console.log(currentUser.uid)
     }
   }
 

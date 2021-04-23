@@ -38,7 +38,7 @@ export class AuthenticateService {
 
   registerUser(value) {
     return new Promise<any>((resolve, reject) => {
-      this.afAuth.createUserWithEmailAndPassword(value.email, value.password).then(
+      firebase.auth().createUserWithEmailAndPassword(value.email, value.password).then(
         result => {
           console.log("User id after reigstration = "+result.user.uid);
           let user: User = {
@@ -49,18 +49,21 @@ export class AuthenticateService {
           this.userCollection.doc(result.user.uid).set(user);
           resolve(result);
         }, error => {
+          console.log(error);
           reject(error);
         }
       )
     })
   }
+  
+
 
   signIn(value) {
     return firebase.auth().signInWithEmailAndPassword(value.email, value.password);
   }
 
   signOut() {
-    firebase.auth().signOut();
+    this.afAuth.signOut();
   }
 
   getCurrentUser() {

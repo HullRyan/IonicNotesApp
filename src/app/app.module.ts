@@ -1,3 +1,4 @@
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -21,11 +22,13 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase),
+  FormsModule,
   AngularFirestoreModule, AngularFireAuthModule],
   providers: [
     StatusBar, 
     SplashScreen,
     LocalNotifications,
+    FormBuilder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
     { provide: SETTINGS, useValue: {} }
   ],

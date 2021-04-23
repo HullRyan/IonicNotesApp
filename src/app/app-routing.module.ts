@@ -12,6 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'notes',
+    loadChildren: () => import('./pages/notes-list/notes-list.module').then( m => m.NotesListPageModule)
+  },
+  {
     path: 'note',
     loadChildren: () => import('./pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
   },
@@ -23,11 +27,10 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
-  {
+  /*{
     path: 'login',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },*/
 ];
 
 @NgModule({

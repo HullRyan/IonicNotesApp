@@ -4,11 +4,11 @@ import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
-    path: '', 
-    loadChildren: () => import('../pages/notes-list/notes-list.module').then( m => m.NotesListPageModule)
+    path: '',
+    component: HomePage
   },
   {
-    path: 'note',
+    path: 'notes',
     loadChildren: () => import('../pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
   },
   {

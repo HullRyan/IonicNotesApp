@@ -50,13 +50,13 @@ export class RegisterPage implements OnInit {
     this.authService.registerUser(value).then(
       res => {
         let alertOptions = {
-          header: "Account created",
+          header: "Account created, please login.",
           message: "For email: "+value.email,
           buttons: ['ok']
         }
         this.showAlert(alertOptions);
         this.authService.signIn(value).then(() => {
-          this.router.navigate(["/note"]);
+          this.router.navigate(["/home"]);
         }).catch(() => {
           let alertOptions = {
             header: "Can't login",

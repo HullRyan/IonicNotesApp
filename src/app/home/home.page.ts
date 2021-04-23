@@ -49,9 +49,9 @@ export class HomePage implements OnInit {
       //update the notes collection
       this.notesService.refreshNotesCollection(res.user.uid);
       //navigate to the list of notes
-      this.router.navigate(['/note']);
+      this.router.navigate(['/notes']);
     }, err => {
-
+      console.log(err);
     })
   }
 
