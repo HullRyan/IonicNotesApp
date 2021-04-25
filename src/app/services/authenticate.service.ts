@@ -36,7 +36,7 @@ export class AuthenticateService {
     )
   }
 
-  registerUser(value) {
+  async registerUser(value) {
     return new Promise<any>((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password).then(
         result => {

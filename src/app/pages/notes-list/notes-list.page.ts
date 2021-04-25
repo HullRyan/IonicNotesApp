@@ -18,4 +18,11 @@ export class NotesListPage implements OnInit {
     this.notes = this.noteService.getNotes();
   }
 
+  getShortBody(body: string){
+    if (body.length > 15){
+      body = body.substr(0, 15) + "...";
+    }
+    return body;
+  }
+
 }

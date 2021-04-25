@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>My Notes</ion-title>
+    <ion-title>Notes</ion-title>
   </ion-toolbar>
 </ion-header>
  
@@ -11,9 +11,32 @@
     </ion-fab-button>
   </ion-fab>
  
+
+  <!--
   <ion-list>
     <ion-item button [routerLink]="['/note', note.id]" *ngFor="let note of (notes | async)">
       {{ note.title }}
     </ion-item>
   </ion-list>
+  -->
+  <ion-reorder-group>
+    <ion-grid fixed>
+      <ion-row wrap>
+        <ion-col *ngFor="let note of (notes | async)" size-lg="2" size-md="4" size-sm="6" size="12">
+          <div>
+          <ion-card>
+              <ion-card-header>{{note.title}}</ion-card-header>
+              <ion-card-content button [routerLink]="['/note', note.id]">
+                <script>
+                  var message = note.body;
+                </script>
+                {{[getShortBody(note.body)]}}
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-reorder-group>
+
 </ion-content>

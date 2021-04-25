@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { FormBuilder, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +17,7 @@ import { AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { Storage } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +31,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
     SplashScreen,
     LocalNotifications,
     FormBuilder,
+    Storage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
     { provide: SETTINGS, useValue: {} }
   ],
