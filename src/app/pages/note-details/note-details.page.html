@@ -1,25 +1,29 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Note Details</ion-title>
+    <ion-title class="ion-text-center">Note Details</ion-title>
+    <ion-buttons slot=end>
+      <ion-button slot="icon-only" (click)="showPrompt()">
+      <ion-icon name="alarm-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
- 
+
 <ion-content padding>
- 
-  <ion-item >
+  <ion-item>
     <ion-label position="stacked">Name</ion-label>
     <ion-input [(ngModel)]="note.title" maxLength="20"></ion-input>
   </ion-item>
- 
+
   <ion-item>
     <ion-label position="stacked">Notes</ion-label>
-    <ion-textarea [(ngModel)]="note.body" auto-grow='true'></ion-textarea>
+    <ion-textarea [(ngModel)]="note.body" auto-grow="true"></ion-textarea>
   </ion-item>
 </ion-content>
- 
+
 <ion-footer *ngIf="!note.id">
   <ion-toolbar color="success">
     <ion-button expand="full" fill="clear" color="light" (click)="addNote()">
@@ -28,17 +32,27 @@
     </ion-button>
   </ion-toolbar>
 </ion-footer>
- 
+
 <ion-footer *ngIf="note.id">
   <ion-row no-padding text-center>
     <ion-col size="6">
-      <ion-button expand="block" fill="outline" color="danger" (click)="deleteNote()">
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="danger"
+        (click)="deleteNote()"
+      >
         <ion-icon name="trash" slot="start"></ion-icon>
         Delete
       </ion-button>
     </ion-col>
     <ion-col size="6">
-      <ion-button expand="block" fill="outline" color="success" (click)="updateNote()">
+      <ion-button
+        expand="block"
+        fill="outline"
+        color="success"
+        (click)="updateNote()"
+      >
         <ion-icon name="save" slot="start"></ion-icon>
         Update
       </ion-button>

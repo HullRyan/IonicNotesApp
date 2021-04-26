@@ -1,0 +1,7 @@
+ion-select::part(selectedText) {
+    opacity: 0;
+}
+
+ion-select::part(text) {
+    display: none;
+}

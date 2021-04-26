@@ -15,7 +15,8 @@ export interface Note {
   body: string,
   createdOn: Date, 
   updatedOn: Date,
-  colorTag: string
+  colorTag: string,
+  notifId: number
 }
 
 @Injectable({
@@ -65,6 +66,7 @@ export class NoteService {
   }
 
   addNote(note: Note): Promise<DocumentReference> {
+    note.notifId = this.generateNotificationId(); 
     return this.noteCollection.add(note);
   }
 
@@ -80,6 +82,10 @@ export class NoteService {
       updatedOn: new Date(),
       colorTag: note.colorTag
     })
+  }
+
+  generateNotificationId(){
+    return Math.floor((Math.random() * 88888889) + 10000000);
   }
 
 }

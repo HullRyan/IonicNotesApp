@@ -1,6 +1,11 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>Notes</ion-title>
+      <ion-buttons slot=end>
+        <ion-button slot="icon-only" (click)="signout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
  
@@ -19,7 +24,6 @@
     </ion-item>
   </ion-list>
   -->
-  <ion-reorder-group>
     <ion-grid fixed>
       <ion-row wrap>
         <ion-col *ngFor="let note of (notes | async)" size-lg="2" size-md="4" size-sm="6" size="12">
@@ -37,6 +41,4 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-reorder-group>
-
 </ion-content>

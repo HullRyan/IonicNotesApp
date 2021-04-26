@@ -3,9 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Ionic Notes App
-    </ion-title>
+    <ion-title> Ionic Notes </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,25 +14,34 @@
       <ion-card-title>Login</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form class="form" [formGroup]="validations_form" 
-      (ngSubmit)="login(validations_form.value)">
+      <form
+        class="form"
+        [formGroup]="validations_form"
+        (ngSubmit)="login(validations_form.value)"
+      >
         <ion-item>
           <ion-label position="floating" color="primary">Email </ion-label>
-          <ion-input type="text" formControlName="email" color="dark"></ion-input>
+          <ion-input
+            type="text"
+            formControlName="email"
+            color="dark"
+          ></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating" color="primary">Password</ion-label>
           <ion-input type="password" formControlName="password"></ion-input>
         </ion-item>
-
-        <ion-button class="submit-btn" type="submit" 
-        [disabled]="!validations_form.valid">Log In</ion-button>
+        <ion-button
+          class="submit-btn"
+          type="submit"
+          slot="top"
+          [disabled]="!validations_form.valid"
+        >
+          Log In
+        </ion-button>
         <label class="error-message"> {{errorMessage}} </label>
       </form>
-      <p> 
-        No account yet?<a routerLink="/register"> sign up </a>
-      </p>  
+      <p>No account yet? <a routerLink="/register">Sign Up </a></p>
     </ion-card-content>
   </ion-card>
-  
 </ion-content>

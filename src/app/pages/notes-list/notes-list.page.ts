@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthenticateService } from './../../services/authenticate.service';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { NoteService, Note } from './../../services/note.service';
@@ -12,7 +14,9 @@ export class NotesListPage implements OnInit {
 
   private notes: Observable<Note[]>;
 
-  constructor(private noteService: NoteService) { }
+  constructor(private noteService: NoteService,
+              private authService: AuthenticateService,
+              private router: Router) { }
 
   ngOnInit() {
     this.notes = this.noteService.getNotes();
@@ -23,6 +27,11 @@ export class NotesListPage implements OnInit {
       body = body.substr(0, 15) + "...";
     }
     return body;
+  }
+
+  signout(){
+    this.authService.signOut();
+    this.router.navigate(['home']).then(() => window.location.reload());
   }
 
 }

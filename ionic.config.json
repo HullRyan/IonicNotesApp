@@ -1,5 +1,8 @@
 {
   "name": "ionicNotesApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

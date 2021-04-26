@@ -22,6 +22,9 @@ export class NotificationService {
               ) { }
 
   setSingleNotification(noteTitle: string, time: number, alert_id: number){
+    if (this.localNotifications.isPresent(alert_id)){
+      this.localNotifications.cancel(alert_id);
+    }
     this.localNotifications.schedule({
       id: alert_id,
       text: "Hey, looks like its time to work on " + noteTitle + 
@@ -32,12 +35,29 @@ export class NotificationService {
     });
   }
 
-  setRecurringNotification(noteTitle: string, alert_id: number){
+  setRecurringNotificationWeek(noteTitle: string, alert_id: number){
+    if (this.localNotifications.isPresent(alert_id)){
+      this.localNotifications.cancel(alert_id);
+    }
     this.localNotifications.schedule({
       id: alert_id,
       text: "Hey, looks like its time to work on " + noteTitle + 
             ".\nClick here to open!",
       trigger: { every: ELocalNotificationTriggerUnit.WEEK }, 
+      led: 'FF0000'
+      //icon: ''
+    });
+  }
+
+  setRecurringNotificationMonth(noteTitle: string, alert_id: number){
+    if (this.localNotifications.isPresent(alert_id)){
+      this.localNotifications.cancel(alert_id);
+    }
+    this.localNotifications.schedule({
+      id: alert_id,
+      text: "Hey, looks like its time to work on " + noteTitle + 
+            ".\nClick here to open!",
+      trigger: { every: ELocalNotificationTriggerUnit.MONTH }, 
       led: 'FF0000'
       //icon: ''
     });
@@ -57,4 +77,17 @@ export class NotificationService {
     this.localNotifications.cancelAll;
   }
 
+  setSingleNotificationTest(noteTitle: string, alert_id: number){
+    if (this.localNotifications.isPresent(alert_id)){
+      this.localNotifications.cancel(alert_id);
+    }
+    this.localNotifications.schedule({
+      id: alert_id,
+      text: "*Test* Hey, looks like its time to work on " + noteTitle + 
+            ".\nClick here to open!",
+      trigger: {at: new Date(new Date().getTime() + 5000)}, 
+      led: 'FF0000'
+      //icon: ''
+    });
+  }
 }
