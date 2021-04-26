@@ -1,4 +1,3 @@
-<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -10,8 +9,9 @@
     </ion-button>
   </ion-buttons>
   </ion-toolbar>
-</ion-header>
 
+
+<!--
 <ion-content padding>
   <ion-item>
     <ion-label position="stacked">Name</ion-label>
@@ -23,6 +23,19 @@
     <ion-textarea [(ngModel)]="note.body" auto-grow="true"></ion-textarea>
   </ion-item>
 </ion-content>
+
+
+-->
+<ion-content fullscreen>
+<ion-card class="card-max-width">
+  <ion-card-title>
+    <ion-input [(ngModel)]="note.title" maxLength="20" placeholder="Name"></ion-input>
+  </ion-card-title>
+  <ion-card-content>
+    <ion-textarea [(ngModel)]="note.body" auto-grow="true" placeholder="Notes"></ion-textarea>
+  </ion-card-content>
+
+
 
 <ion-footer *ngIf="!note.id">
   <ion-toolbar color="success">
@@ -54,8 +67,23 @@
         (click)="updateNote()"
       >
         <ion-icon name="save" slot="start"></ion-icon>
-        Update
+        Save Changes
       </ion-button>
     </ion-col>
   </ion-row>
+
+  
+<style>
+    .min-max-width {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .card-max-width {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px, 20px, 20px, 20px;
+    }
+</style>
 </ion-footer>
+</ion-card>
+</ion-content>

@@ -1,7 +1,15 @@
-ion-select::part(selectedText) {
-    opacity: 0;
-}
+.cardfooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .has-cardfooter {
+    padding-bottom: 15px;
+  }
 
-ion-select::part(text) {
-    display: none;
-}
+  ion-card-title {
+      padding-left: 15px;
+      padding-top: 15px;
+  }
+

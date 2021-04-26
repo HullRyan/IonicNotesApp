@@ -39,7 +39,7 @@ export class NoteService {
 
   refreshNotesCollection(userId) {
     this.noteCollection = this.firestore.collection('users').doc(userId).collection<Note>('notes', 
-    ref => ref.orderBy('createdOn', 'desc'));
+    ref => ref.orderBy('updatedOn', 'desc'));
     this.notes = this.noteCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {

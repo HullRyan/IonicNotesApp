@@ -112,6 +112,11 @@ export class NoteDetailsPage implements OnInit {
           type: 'radio',
           label: 'Test, 5 seconds',
           value: '6'
+        },
+        {
+          type: 'radio',
+          label: 'Clear Notifications',
+          value: '7'
         }
       ],
       buttons: [
@@ -141,6 +146,9 @@ export class NoteDetailsPage implements OnInit {
             }
             if(data == 6){
               this.notificationService.setSingleNotificationTest(this.note.title, this.note.notifId);
+            }
+            if(data == 7){
+              this.notificationService.removeSpecificNotifcation(this.note.notifId);
             }
             console.log('Selected Information', data);
           }

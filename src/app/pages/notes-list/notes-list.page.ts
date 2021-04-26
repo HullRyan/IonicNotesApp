@@ -23,8 +23,8 @@ export class NotesListPage implements OnInit {
   }
 
   getShortBody(body: string){
-    if (body.length > 15){
-      body = body.substr(0, 15) + "...";
+    if (body.length > 40){
+      body = body.substr(0, 40) + "...";
     }
     return body;
   }
