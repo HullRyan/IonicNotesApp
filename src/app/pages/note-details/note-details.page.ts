@@ -124,6 +124,21 @@ export class NoteDetailsPage implements OnInit {
         {
           text: 'Done!',
           handler: (data: any) => {
+            if(data == 1){
+              this.notificationService.setSingleNotification(this.note.title, 8.64e+7, this.note.notifId);
+            }
+            if(data == 2){
+              this.notificationService.setSingleNotification(this.note.title, 6.048e+8, this.note.notifId);
+            }
+            if(data == 3){
+              this.notificationService.setRecurringNotificationDay(this.note.title, this.note.notifId);
+            }
+            if(data == 4){
+              this.notificationService.setRecurringNotificationWeek(this.note.title, this.note.notifId);
+            }
+            if(data == 5){
+              this.notificationService.setRecurringNotificationMonth(this.note.title, this.note.notifId);
+            }
             if(data == 6){
               this.notificationService.setSingleNotificationTest(this.note.title, this.note.notifId);
             }

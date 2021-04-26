@@ -35,6 +35,20 @@ export class NotificationService {
     });
   }
 
+  setRecurringNotificationDay(noteTitle: string, alert_id: number){
+    if (this.localNotifications.isPresent(alert_id)){
+      this.localNotifications.cancel(alert_id);
+    }
+    this.localNotifications.schedule({
+      id: alert_id,
+      text: "Hey, looks like its time to work on " + noteTitle + 
+            ".\nClick here to open!",
+      trigger: { every: ELocalNotificationTriggerUnit.DAY }, 
+      led: 'FF0000'
+      //icon: ''
+    });
+  }
+
   setRecurringNotificationWeek(noteTitle: string, alert_id: number){
     if (this.localNotifications.isPresent(alert_id)){
       this.localNotifications.cancel(alert_id);
