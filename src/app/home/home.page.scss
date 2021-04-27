@@ -26,11 +26,10 @@
   text-decoration: none;
 }
 
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+.item-ios {
+  background: #1c1c1d;
 }
 
-.webkit-autofill {
-  background-color: transparent;
+.item-complex .item-content {
+  background: #1c1c1d !important;
 }
