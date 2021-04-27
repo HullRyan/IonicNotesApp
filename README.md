@@ -10,9 +10,9 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 - [Overview](#overview)
 
-- [Application Preview](#application-preview)
+- [How to Deploy](#how-to-deploy) 
 
-- [How to Deploy](#how-to-deploy)
+- [Application Preview](#application-preview)
 
 - [Engineering Process](#engineering-process)
 
@@ -36,6 +36,25 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 * Built to be a cross-platform, cloud-based notes application for use on web, android, iOS, and desktop.
 * Uses a Google Firebase, Firestore Database for the authentication and storage of users, and notes.
 * See [package.json](/package.json) for full list of dependencies and plugins.
+
+
+
+## How to Deploy
+
+### Requirements: 
+
+* [Ionic CLI](https://ionicframework.com/docs/intro/cli)
+* [Node.js](https://nodejs.org/en/)
+
+### Steps:
+
+1. Clone repository `git clone https://github.com/HullRyan/IonicNotesApp`
+2. Create Google Firebase Project and Firestore Database
+3. Create collections for users, notes. See [database.md]()
+4. Place your Firebase SDK Config snippet into [/src/environments/envoironments.ts]()
+5. Run `npm install` from root to install dependencies
+6. Run `ionic serve` or build to desired platform with `ionic build` and deploy
+7. Enjoy :notebook::pencil2:
 
 
 
@@ -82,26 +101,6 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 | Windows            |
 | ------------------ |
 | ![Windows Desktop Notes List](/resources/screenshots/notes(Laptop).png) |
-
-
-
-## How to Deploy
-
-### Requirements: 
-
-* [Ionic CLI](https://ionicframework.com/docs/intro/cli)
-* [Node.js](https://nodejs.org/en/)
-
-### Steps:
-
-1. Clone repository `git clone https://github.com/HullRyan/IonicNotesApp`
-2. Create Google Firebase Project and Firestore Database
-3. Create collections for users, notes. See [database.md]()
-4. Place your Firebase SDK Config snippet into [/src/environments/envoironments.ts]()
-5. Run `npm install` from root to install dependencies
-6. Run `ionic serve` or build to desired platform with `ionic build` and deploy
-7. Enjoy :notebook::pencil2:
-
 
 
 ## Engineering Process
