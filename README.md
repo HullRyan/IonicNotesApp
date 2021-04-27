@@ -42,7 +42,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login]() | ![iOS Menu]() |
+| ![Android Login](/resources/screenshots/login-page(Pixel 2 XL).png) | ![iOS Login]() |
 
 ### [Register]()
 
