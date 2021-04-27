@@ -22,12 +22,12 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 ## Purpose/ Goals
 
-* Showcase the engineering process
-* Showcasing the development cycle
-* Agile model
-* Test Driven development
-* Common Design Patterns
-* Current and active frameworks
+* Showcase an application of the engineering process
+* Showcasing an application of the development cycle
+* Following the Agile model
+* Practicing Test Driven Development
+* Knowledge of Common Design Patterns
+* Showcase the use of current and active frameworks
 
 
 
