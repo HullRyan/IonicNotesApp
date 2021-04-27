@@ -1,4 +1,4 @@
-# Ionic Angular Notes Application
+# Ionic Notes Application
 
 This application is a project for ITSC 3155 Software Engineering at UNC Charlotte, made by me, Ryan Hull.
 
