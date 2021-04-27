@@ -10,11 +10,11 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 - [Overview](#overview)
 
-- [Application Preview](application-preview)
+- [Application Preview](#application-preview)
 
-- [How to Deploy](how-to-deploy)
+- [How to Deploy](#how-to-deploy)
 
-- [Engineering Process](engineering-process)
+- [Engineering Process](#engineering-process)
 
   
 
