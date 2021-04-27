@@ -15,6 +15,9 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 - [Application Preview](#application-preview)
 
 - [Engineering Process](#engineering-process)
+  - [Sprint 1](#sprint-1-482021---4192021-heavy_check_mark)
+  - [Sprint 2](#sprint-2-4192021---4272021-heavy_check_mark)
+  - [Sprint 3](#sprint-3-4272021---552021-eyes)
 
 - [Testing Process](#testing-process)
 
