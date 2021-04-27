@@ -21,8 +21,12 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 ## Purpose/ Goals
 
-* The purpose of this project is to showcase the engineering process, showcasing the development cycle, Agile model, test--driven development, design patterns, current and active frameworks
-* 
+* Showcase the engineering process
+* Showcasing the development cycle
+* Agile model
+* Test Driven development
+* Common Design Patterns
+* Current and active frameworks
 
 
 
@@ -31,49 +35,49 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 * Built using Angular.
 * Built to be a cross-platform, cloud-based notes application for use on web, android, iOS, and desktop.
 * Uses a Google Firebase, Firestore Database for the authentication and storage of users, and notes.
-* See [package.json]() for full list of dependencies and plugins.
+* See [package.json](/package.json) for full list of dependencies and plugins.
 
 
 
 ## Application Preview
 
-### [Login]()
+### [Login](/src/app/home.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
 | ![Android Login](/resources/screenshots/login-page(Pixel-2-XL).png) | ![iOS Login](/resources/screenshots/login-page(iPhone-X).png) |
 
-### [Register]()
+### [Register](/src/app/pages/register/register.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
 | ![Android Register](/resources/screenshots/register-page(Pixel-2-XL).png) | ![iOS Register](/resources/screenshots/register-page(iPhone-X).png) |
 
-### [Create Note]()
+### [Create Note](/src/app/pages/note-details/note-details.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
 | ![Android Create Note](/resources/screenshots/note-page-create(Pixel-2-XL).png) | ![iOS Create Note](/resources/screenshots/note-page-create(iPhone-X).png) |
 
-### [Notes List]()
+### [Notes List](/src/app/pages/notes-list/notes-list.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
 | ![Android Notes List](/resources/screenshots/notes-page(Pixel-2-XL).png) | ![iOS Notes List](/resources/screenshots/notes-page(iPhone-X).png) |
 
-### [Edit Note]()
+### [Edit Note](/src/app/pages/note-details/note-details.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
 | ![Android Edit Note](/resources/screenshots/note-page-edit(Pixel-2-XL).png) | ![iOS Edit Note](/resources/screenshots/note-page-edit(iPhone-X).png) |
 
-### [Set Reminder]()
+### [Set Reminder](/src/app/services/notification.service.ts)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
 | ![Android Set Reminder](/resources/screenshots/set-reminder(Pixel-2-XL).png) | ![iOS Set Reminder](/resources/screenshots/set-reminder(iPhone-X).png) |
 
-### [Desktop Notes List]()
+### [Desktop Notes List](/src/app/pages/notes-list/notes-list.page.html)
 
 | Windows            |
 | ------------------ |
