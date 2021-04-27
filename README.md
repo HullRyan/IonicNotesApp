@@ -18,6 +18,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
   
   
+  
 
 ## Purpose/ Goals
 
@@ -27,6 +28,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 * Test Driven development
 * Common Design Patterns
 * Current and active frameworks
+
 
 
 
