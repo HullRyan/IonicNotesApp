@@ -41,7 +41,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 ## Application Preview
 
-### [Login](/src/app/home.page.html)
+### [Login](/src/app/home/home.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
