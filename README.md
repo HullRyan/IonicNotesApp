@@ -48,37 +48,37 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login]() | ![iOS Menu]() |
+| ![Android Register](/resources/screenshots/register-page(Pixel-2-XL).png) | ![iOS Register](/resources/screenshots/register-page(iPhone-X).png) |
 
 ### [Create Note]()
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login]() | ![iOS Menu]() |
+| ![Android Create Note](/resources/screenshots/note-page-create(Pixel-2-XL).png) | ![iOS Create Note](/resources/screenshots/note-page-create(iPhone-X).png) |
 
 ### [Notes List]()
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login]() | ![iOS Menu]() |
+| ![Android Notes List](/resources/screenshots/notes-page(Pixel-2-XL).png) | ![iOS Notes List](/resources/screenshots/notes-page(iPhone-X).png) |
 
 ### [Edit Note]()
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login]() | ![iOS Menu]() |
+| ![Android Edit Note](/resources/screenshots/note-page-edit(Pixel-2-XL).png) | ![iOS Edit Note](/resources/screenshots/note-page-edit(iPhone-X).png) |
 
 ### [Set Reminder]()
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login]() | ![iOS Menu]() |
+| ![Android Set Reminder](/resources/screenshots/set-reminder(Pixel-2-XL).png) | ![iOS Set Reminder](/resources/screenshots/set-reminder(iPhone-X).png) |
 
 ### [Desktop Notes List]()
 
 | Windows            |
 | ------------------ |
-| ![Android Login]() |
+| ![Windows Desktop Notes List](/resources/screenshots/notes(Laptop).png) |
 
 
 
