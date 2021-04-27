@@ -45,37 +45,37 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 | Material Design    | iOS                |
 | ------------------ | ------------------ |
-| <img src="/resources/screenshots/login-page(Pixel-2-XL).png" width=83% align="center"/> | <img src="/resources/screenshots/login-page(iPhone-X).png" /> |
+| <img src="/resources/screenshots/login-page(Pixel-2-XL).png" width=83%/> | <img src="/resources/screenshots/login-page(iPhone-X).png" /> |
 
 ### [Register](/src/app/pages/register/register.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Register](/resources/screenshots/register-page(Pixel-2-XL).png) | ![iOS Register](/resources/screenshots/register-page(iPhone-X).png) |
+| <img src="/resources/screenshots/register-page(Pixel-2-XL).png" width=83%/> | ![iOS Register](/resources/screenshots/register-page(iPhone-X).png) |
 
 ### [Create Note](/src/app/pages/note-details/note-details.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Create Note](/resources/screenshots/note-page-create(Pixel-2-XL).png) | ![iOS Create Note](/resources/screenshots/note-page-create(iPhone-X).png) |
+| <img src="/resources/screenshots/note-page-create(Pixel-2-XL).png" width=83%/> | ![iOS Create Note](/resources/screenshots/note-page-create(iPhone-X).png) |
 
 ### [Notes List](/src/app/pages/notes-list/notes-list.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Notes List](/resources/screenshots/notes-page(Pixel-2-XL).png) | ![iOS Notes List](/resources/screenshots/notes-page(iPhone-X).png) |
+| <img src="/resources/screenshots/notes-page(Pixel-2-XL).png" width=83%/> | ![iOS Notes List](/resources/screenshots/notes-page(iPhone-X).png) |
 
 ### [Edit Note](/src/app/pages/note-details/note-details.page.html)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Edit Note](/resources/screenshots/note-page-edit(Pixel-2-XL).png) | ![iOS Edit Note](/resources/screenshots/note-page-edit(iPhone-X).png) |
+| <img src="/resources/screenshots/note-page-edit(Pixel-2-XL).png" width=83%/> | ![iOS Edit Note](/resources/screenshots/note-page-edit(iPhone-X).png) |
 
 ### [Set Reminder](/src/app/services/notification.service.ts)
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Set Reminder](/resources/screenshots/set-reminder(Pixel-2-XL).png) | ![iOS Set Reminder](/resources/screenshots/set-reminder(iPhone-X).png) |
+| <img src="/resources/screenshots/set-reminder(Pixel-2-XL).png" width=83%/> | ![iOS Set Reminder](/resources/screenshots/set-reminder(iPhone-X).png) |
 
 ### [Desktop Notes List](/src/app/pages/notes-list/notes-list.page.html)
 
