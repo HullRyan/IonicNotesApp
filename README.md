@@ -162,7 +162,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 
 
-### Sprint 3: (4/27/2021 - Current) :eyes:
+### Sprint 3: (4/27/2021 - 5/5/2021) :eyes:
 
 * Plan: Markdown Notes App with advanced Notification Integration
   * Features extracted from user stories:
