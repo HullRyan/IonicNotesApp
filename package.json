@@ -1,13 +1,13 @@
 {
   "name": "IonicNotesApp",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Ryan Hull",
+  "homepage": "https://github.com/HullRyan/IonicNotesApp/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "jasmine",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -63,6 +63,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
+    "jasmine": "^2.8.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.2.0",
@@ -75,7 +76,7 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.0.2"
   },
-  "description": "An Ionic project",
+  "description": "Ionic Notes App",
   "cordova": {
     "plugins": {
       "cordova-plugin-local-notification": {},
