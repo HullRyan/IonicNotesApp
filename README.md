@@ -45,7 +45,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 | Material Design    | iOS           |
 | ------------------ | ------------- |
-| ![Android Login](/resources/screenshots/login-page(Pixel-2-XL).png){:height="50%" width="50%"} | ![iOS Login](/resources/screenshots/login-page(iPhone-X).png){:height="50%" width="50%"} |
+| <img src="/resources/screenshots/login-page(Pixel-2-XL).png" width="100" height="100"/> | ![iOS Login](/resources/screenshots/login-page(iPhone-X).png) |
 
 ### [Register](/src/app/pages/register/register.page.html)
 
