@@ -115,7 +115,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 ### Agile Methodology:
 
 ### Sprint 1: (4/8/2021 - 4/19/2021) :heavy_check_mark:
-  *  Plan: Local Notes and Reminders App 
+  * Plan: Local Notes and Reminders App 
     * Features extracted from user stories:
       * Save/ Delete Notes
       * Set Single/ Recurring notifications
