@@ -10,7 +10,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 - [Overview](#overview)
 
-- [How to Deploy](#how-to-deploy) 
+- [How to Deploy](#how-to-deploy)
 
 - [Application Preview](#application-preview)
 
@@ -21,39 +21,30 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 - [Testing Process](#testing-process)
 
-  
-  
-  
-
 ## Purpose/ Goals
 
-* Showcase an application of the engineering process
-* Showcasing an application of the development cycle
-* Following the Agile model
-* Practicing Test Driven Development
-* Knowledge of Common Design Patterns
-* Showcase the use of current and active frameworks
-
-
-
+- Showcase an application of the engineering process
+- Showcasing an application of the development cycle
+- Following the Agile model
+- Practicing Test Driven Development
+- Knowledge of Common Design Patterns
+- Showcase the use of current and active frameworks
 
 ## Overview
 
-* Built using Angular.
-* Built to be a cross-platform, cloud-based notes application for use on web, android, iOS, and desktop.
-* Uses a Google Firebase, Firestore Database for the authentication and storage of users, and notes.
-* See [package.json](/package.json) for full list of dependencies and plugins.
-
-
+- Built using Angular.
+- Built to be a cross-platform, cloud-based notes application for use on web, android, iOS, and desktop.
+- Uses a Google Firebase, Firestore Database for the authentication and storage of users, and notes.
+- See [package.json](/package.json) for full list of dependencies and plugins.
 
 ## How to Deploy
 
-### Requirements: 
+### Requirements
 
-* [Ionic CLI](https://ionicframework.com/docs/intro/cli)
-* [Node.js](https://nodejs.org/en/)
+- [Ionic CLI](https://ionicframework.com/docs/intro/cli)
+- [Node.js](https://nodejs.org/en/)
 
-### Steps:
+### Steps
 
 1. Clone repository `git clone https://github.com/HullRyan/IonicNotesApp`
 2. Create Google Firebase Project and Firestore Database
@@ -62,8 +53,6 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 5. Run `npm install` from root to install dependencies
 6. Run `ionic serve` or build to desired platform with `ionic build` and deploy
 7. Enjoy :notebook::pencil2:
-
-
 
 ## Application Preview
 
@@ -109,81 +98,77 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 | ------------------ |
 | ![Windows Desktop Notes List](/resources/screenshots/notes(Laptop).png) |
 
-
 ## Engineering Process
 
-### Agile Methodology:
+### Agile Methodology
 
-### Sprint 1: (4/8/2021 - 4/19/2021) :heavy_check_mark:
-  * Plan: Local Notes and Reminders App 
-    * Features extracted from user stories:
-      * Save/ Delete Notes
-      * Set Single/ Recurring notifications
-      * Clear set notifications
-  * Design: Ionic Framework base application
-    * Notes List page
-    * Note Details/ Edit page
-    * Note service
-  * Development: Implement local storage for notes and reminders
-    * Capacitor - Cordova plugins
-    * Notes service
-    * Notification service
-  * Testing: Tested all functions made with built in data
-    
-    * Made notes, deleted notes, set notification, deleted notification
-  * Review: Missing cross-platform functionality
-    * Added user stories based on feedback
-      * Needed: Responsive UI vs current Static UI
-      * Needed: Cloud database for notes 
+### Sprint 1: (4/8/2021 - 4/19/2021) :heavy_check_mark
 
+- Plan: Local Notes and Reminders App
+  - Features extracted from user stories:
+    - Save/ Delete Notes
+    - Set Single/ Recurring notifications
+    - Clear set notifications
+- Design: Ionic Framework base application
+  - Notes List page
+  - Note Details/ Edit page
+  - Note service
+- Development: Implement local storage for notes and reminders
+  - Capacitor - Cordova plugins
+  - Notes service
+  - Notification service
+- Testing: Tested all functions made with built in data
 
+  - Made notes, deleted notes, set notification, deleted notification
+- Review: Missing cross-platform functionality
+  - Added user stories based on feedback
+    - Needed: Responsive UI vs current Static UI
+    - Needed: Cloud database for notes
 
-### Sprint 2: (4/19/2021 - 4/27/2021) :heavy_check_mark:
-  * Plan: Cloud Notes App with Reminders
-    * Features extracted from user stories:
-      * Account creation/ authentication
-      * Note storage in Cloud database
-      * Responsive UI for cross-platform use
-  * Design: Sprint 1 UI Base
-    * Login/Home page
-    * Register page
-    * Notes List page
-    * Note Details/ Edit page
-  * Development: Implement Cloud functionality
-    * Firestore database
-    * Responsive UI with HTML and CSS styling
-    * Angular authentication service
-    * Update note service for use with database
-    * Attached notification service to note service through notification interface
-  * Testing: Testing authentication, note functions, reminders, UI
-    * Tested all tests from Sprint 1
-    * Tested account creation, deletion, sign in, sign out
-    * Tested UI on platforms with varying sizes (Web, Android, iOS, Windows)
-  * Review: Missing functionality for complex data in note,  notification control and settings
-    * Added user stories based on feedback
-      * Needed: Notifications view page
-      * Needed: Advanced Text Editor in place for Note body
-      * Needed: Updated database collection and fields for search and sorting
+### Sprint 2: (4/19/2021 - 4/27/2021) :heavy_check_mark
 
+- Plan: Cloud Notes App with Reminders
+  - Features extracted from user stories:
+    - Account creation/ authentication
+    - Note storage in Cloud database
+    - Responsive UI for cross-platform use
+- Design: Sprint 1 UI Base
+  - Login/Home page
+  - Register page
+  - Notes List page
+  - Note Details/ Edit page
+- Development: Implement Cloud functionality
+  - Firestore database
+  - Responsive UI with HTML and CSS styling
+  - Angular authentication service
+  - Update note service for use with database
+  - Attached notification service to note service through notification interface
+- Testing: Testing authentication, note functions, reminders, UI
+  - Tested all tests from Sprint 1
+  - Tested account creation, deletion, sign in, sign out
+  - Tested UI on platforms with varying sizes (Web, Android, iOS, Windows)
+- Review: Missing functionality for complex data in note,  notification control and settings
+  - Added user stories based on feedback
+    - Needed: Notifications view page
+    - Needed: Advanced Text Editor in place for Note body
+    - Needed: Updated database collection and fields for search and sorting
 
+### Sprint 3: (4/27/2021 - 5/5/2021) :eyes
 
-### Sprint 3: (4/27/2021 - 5/5/2021) :eyes:
-
-* Plan: Markdown Notes App with advanced Notification Integration
-  * Features extracted from user stories:
-    * Markdown Editor for Note body
-    * Notifications list page
-    * Notes list sort/ search 
-* Design: Sprint 2 UI Base    (Current Stage - 4/27/2021 :pushpin:)
-  * Login/ Home page
-  * Register page
-  * Notes List page
-  * Note Details/ Edit Page
-  * Settings Tab
-    * Account functions
-    * Notification List Page
-
-
+- Plan: Markdown Notes App with advanced Notification Integration
+  - Features extracted from user stories:
+    - Markdown Editor for Note body
+    - Notifications list page
+    - Notes list sort/ search
+- Design: Sprint 2 UI Base    (Current Stage - 4/27/2021 :pushpin:)
+  - Login/ Home page
+  - Register page
+  - Notes List page
+  - Note Details/ Edit Page
+  - Settings Tab
+    - Account functions
+    - Notification List Page
 
 ## Testing Process
- * Unit Testing using Karma and Jasmine * To be Added
+
+- Unit Testing using Karma and Jasmine * To be Added
