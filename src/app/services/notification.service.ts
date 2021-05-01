@@ -1,13 +1,13 @@
 import { Observable } from 'rxjs';
 //import { notifcation } from './notification.service';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
-import { Storage } from '@ionic/storage'
 import { ELocalNotificationTriggerUnit } from '@ionic-native/local-notifications';
 import { Injectable } from '@angular/core';
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export interface notifcation {
-  alert_id: number
-  note_id: string
+  alertId: number;
+  noteId: string;
 }
 
 @Injectable({
@@ -21,57 +21,57 @@ export class NotificationService {
               //private notifcations: Observable<notifcation[]>
               ) { }
 
-  setSingleNotification(noteTitle: string, time: number, alert_id: number){
-    if (this.localNotifications.isPresent(alert_id)){
-      this.localNotifications.cancel(alert_id);
+  setSingleNotification(noteTitle: string, time: number, alertId: number){
+    if (this.localNotifications.isPresent(alertId)){
+      this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
-      id: alert_id,
-      text: "Hey, looks like its time to work on " + noteTitle + 
-            ".\nClick here to open!",
-      trigger: {at: new Date(new Date().getTime() + time)}, 
+      id: alertId,
+      text: 'Hey, looks like its time to work on ' + noteTitle +
+            '.\nClick here to open!',
+      trigger: {at: new Date(new Date().getTime() + time)},
       led: 'FF0000'
       //icon: ''
     });
   }
 
-  setRecurringNotificationDay(noteTitle: string, alert_id: number){
-    if (this.localNotifications.isPresent(alert_id)){
-      this.localNotifications.cancel(alert_id);
+  setRecurringNotificationDay(noteTitle: string, alertId: number){
+    if (this.localNotifications.isPresent(alertId)){
+      this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
-      id: alert_id,
-      text: "Hey, looks like its time to work on " + noteTitle + 
-            ".\nClick here to open!",
-      trigger: { every: ELocalNotificationTriggerUnit.DAY }, 
+      id: alertId,
+      text: 'Hey, looks like its time to work on ' + noteTitle +
+            '.\nClick here to open!',
+      trigger: { every: ELocalNotificationTriggerUnit.DAY },
       led: 'FF0000'
       //icon: ''
     });
   }
 
-  setRecurringNotificationWeek(noteTitle: string, alert_id: number){
-    if (this.localNotifications.isPresent(alert_id)){
-      this.localNotifications.cancel(alert_id);
+  setRecurringNotificationWeek(noteTitle: string, alertId: number){
+    if (this.localNotifications.isPresent(alertId)){
+      this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
-      id: alert_id,
-      text: "Hey, looks like its time to work on " + noteTitle + 
-            ".\nClick here to open!",
-      trigger: { every: ELocalNotificationTriggerUnit.WEEK }, 
+      id: alertId,
+      text: 'Hey, looks like its time to work on ' + noteTitle +
+            '.\nClick here to open!',
+      trigger: { every: ELocalNotificationTriggerUnit.WEEK },
       led: 'FF0000'
       //icon: ''
     });
   }
 
-  setRecurringNotificationMonth(noteTitle: string, alert_id: number){
-    if (this.localNotifications.isPresent(alert_id)){
-      this.localNotifications.cancel(alert_id);
+  setRecurringNotificationMonth(noteTitle: string, alertId: number){
+    if (this.localNotifications.isPresent(alertId)){
+      this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
-      id: alert_id,
-      text: "Hey, looks like its time to work on " + noteTitle + 
-            ".\nClick here to open!",
-      trigger: { every: ELocalNotificationTriggerUnit.MONTH }, 
+      id: alertId,
+      text: 'Hey, looks like its time to work on ' + noteTitle +
+            '.\nClick here to open!',
+      trigger: { every: ELocalNotificationTriggerUnit.MONTH },
       led: 'FF0000'
       //icon: ''
     });
@@ -81,25 +81,25 @@ export class NotificationService {
     return this.localNotifications.getAllScheduled();
   }
 
-  removeSpecificNotifcation(alert_id: number){
-    if(this.localNotifications.isPresent(alert_id)){
-      this.localNotifications.cancel(alert_id);
+  removeSpecificNotifcation(alertId: number){
+    if(this.localNotifications.isPresent(alertId)){
+      this.localNotifications.cancel(alertId);
     }
   }
 
   removeAllNotifications(){
-    this.localNotifications.cancelAll;
+    this.localNotifications.cancelAll();
   }
 
-  setSingleNotificationTest(noteTitle: string, alert_id: number){
-    if (this.localNotifications.isPresent(alert_id)){
-      this.localNotifications.cancel(alert_id);
+  setSingleNotificationTest(noteTitle: string, alertId: number){
+    if (this.localNotifications.isPresent(alertId)){
+      this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
-      id: alert_id,
-      text: "*Test* Hey, looks like its time to work on " + noteTitle + 
-            ".\nClick here to open!",
-      trigger: {at: new Date(new Date().getTime() + 5000)}, 
+      id: alertId,
+      text: '*Test* Hey, looks like its time to work on ' + noteTitle +
+            '.\nClick here to open!',
+      trigger: {at: new Date(new Date().getTime() + 5000)},
       led: 'FF0000'
       //icon: ''
     });

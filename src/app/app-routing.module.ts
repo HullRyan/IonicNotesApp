@@ -15,7 +15,7 @@ const routes: Routes = [
     ...canActivate(redirectLoggedInToNotes),
   },
   {
-    path: '', 
+    path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },

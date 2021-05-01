@@ -5,12 +5,12 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import firebase from "firebase";
+import firebase from 'firebase';
 
 export interface User {
-  id?: string,
-  name: string,
-  email: string
+  id?: string;
+  name: string;
+  email: string;
 }
 
 @Injectable({
@@ -20,28 +20,26 @@ export interface User {
 export class AuthenticateService {
 
   private userCollection: AngularFirestoreCollection<User>;
-  private users: Observable<User[]>
+  private users: Observable<User[]>;
 
   constructor(private firestore: AngularFirestore,
               private afAuth: AngularFireAuth) {
     this.userCollection = firestore.collection<User> ('users');
     this.users = this.userCollection.snapshotChanges().pipe(
-      map (actions => {
-        return actions.map (a => {
+      map (actions => actions.map (a => {
           const data = a.payload.doc.data();
           const id = a.payload.doc.id;
           return {id, ... data};
-        })
-      })
-    )
+        }))
+    );
   }
 
   async registerUser(value) {
     return new Promise<any>((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password).then(
         result => {
-          console.log("User id after reigstration = "+result.user.uid);
-          let user: User = {
+          console.log('User id after reigstration = '+result.user.uid);
+          const user: User = {
             email: value.email,
             id: result.user.uid,
             name: value.name
@@ -52,10 +50,10 @@ export class AuthenticateService {
           console.log(error);
           reject(error);
         }
-      )
-    })
+      );
+    });
   }
-  
+
 
 
   signIn(value) {

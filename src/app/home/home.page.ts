@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { NavController, AlertController } from '@ionic/angular';
@@ -13,7 +14,18 @@ import { NoteService } from '../services/note.service';
 export class HomePage implements OnInit {
 
   validations_form: FormGroup;
-  errorMessage: string = "";
+  errorMessage = '';
+
+  validation_messages = {
+    email:[
+      {type:'required', message:'Email is required'},
+      {type:'pattern', message:'Please enter a valid email address'},
+    ],
+    password: [
+      {type:'required', message:'You must provide a password'},
+      {type:'minlength', message:'The minimum length of your password must be 6'},
+    ]
+  };
 
   constructor(private navCtrl: NavController,
               private alertCtrl: AlertController,
@@ -33,16 +45,7 @@ export class HomePage implements OnInit {
       ]))
     });
   }
-  validation_messages = {
-    'email':[ 
-      {type:'required', message:'Email is required'},
-      {type:'pattern', message:'Please enter a valid email address'},
-    ],
-    'password': [
-      {type:'required', message:'You must provide a password'},
-      {type:'minlength', message:'The minimum length of your password must be 6'},
-    ]
-  }
+
   login(value) {
     this.authService.signIn(value).then(res => {
       //res => response for the user credentials
@@ -52,7 +55,7 @@ export class HomePage implements OnInit {
       this.router.navigate(['/notes']);
     }, err => {
       console.log(err);
-    })
+    });
   }
 
 }

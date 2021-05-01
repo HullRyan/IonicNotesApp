@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { AuthenticateService } from './../../services/authenticate.service';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { NoteService, Note } from './../../services/note.service';
 import { Component, OnInit } from '@angular/core';
@@ -24,7 +23,7 @@ export class NotesListPage implements OnInit {
 
   getShortBody(body: string){
     if (body.length > 40){
-      body = body.substr(0, 40) + "...";
+      body = body.substr(0, 40) + '...';
     }
     return body;
   }

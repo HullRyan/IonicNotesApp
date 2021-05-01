@@ -17,23 +17,20 @@ export class NoteDetailsPage implements OnInit {
   note: Note = {
     title: '',
     body: '',
-    createdOn: new Date, 
-    updatedOn: new Date,
-    colorTag: '', 
+    createdOn: new Date(),
+    updatedOn: new Date(),
+    colorTag: '',
     notifId: 0
-  }
-  
+  };
+
 
   constructor(private activatedRoute: ActivatedRoute, private noteService: NoteService,
-    private toastCtrl: ToastController, private router: Router, 
+    private toastCtrl: ToastController, private router: Router,
     private notificationService: NotificationService,
     private alertController: AlertController) { }
 
   ngOnInit() {
-  }
-
-  ionViewWillEnter() {
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
     if (id) {
       this.noteService.getNote(id).subscribe(note => {
         this.note = note;
@@ -129,25 +126,25 @@ export class NoteDetailsPage implements OnInit {
         {
           text: 'Done!',
           handler: (data: any) => {
-            if(data == 1){
+            if(data === 1){
               this.notificationService.setSingleNotification(this.note.title, 8.64e+7, this.note.notifId);
             }
-            if(data == 2){
+            if(data === 2){
               this.notificationService.setSingleNotification(this.note.title, 6.048e+8, this.note.notifId);
             }
-            if(data == 3){
+            if(data === 3){
               this.notificationService.setRecurringNotificationDay(this.note.title, this.note.notifId);
             }
-            if(data == 4){
+            if(data === 4){
               this.notificationService.setRecurringNotificationWeek(this.note.title, this.note.notifId);
             }
-            if(data == 5){
+            if(data === 5){
               this.notificationService.setRecurringNotificationMonth(this.note.title, this.note.notifId);
             }
-            if(data == 6){
+            if(data === 6){
               this.notificationService.setSingleNotificationTest(this.note.title, this.note.notifId);
             }
-            if(data == 7){
+            if(data === 7){
               this.notificationService.removeSpecificNotifcation(this.note.notifId);
             }
             console.log('Selected Information', data);

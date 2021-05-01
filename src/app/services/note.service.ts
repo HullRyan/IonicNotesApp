@@ -10,13 +10,13 @@ import { identifierName } from '@angular/compiler';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 export interface Note {
-  id?: string,
-  title: string,
-  body: string,
-  createdOn: Date, 
-  updatedOn: Date,
-  colorTag: string,
-  notifId: number
+  id?: string;
+  title: string;
+  body: string;
+  createdOn: Date;
+  updatedOn: Date;
+  colorTag: string;
+  notifId: number;
 }
 
 @Injectable({
@@ -26,28 +26,26 @@ export class NoteService {
   private notes: Observable<Note[]>;
   private noteCollection: AngularFirestoreCollection<Note>;
 
-  constructor(private firestore: AngularFirestore, 
+  constructor(private firestore: AngularFirestore,
               private afAuth: AngularFireAuth,
               private authenticateService: AuthenticateService) {
-    let currentUser = this.authenticateService.getCurrentUser();
-    
+    const currentUser = this.authenticateService.getCurrentUser();
+
     if(currentUser) {
-      this.refreshNotesCollection(currentUser.uid)
-      console.log(currentUser.uid)
+      this.refreshNotesCollection(currentUser.uid);
+      console.log(currentUser.uid);
     }
   }
 
   refreshNotesCollection(userId) {
-    this.noteCollection = this.firestore.collection('users').doc(userId).collection<Note>('notes', 
+    this.noteCollection = this.firestore.collection('users').doc(userId).collection<Note>('notes',
     ref => ref.orderBy('updatedOn', 'desc'));
     this.notes = this.noteCollection.snapshotChanges().pipe(
-      map(actions => {
-        return actions.map(a => {
+      map(actions => actions.map(a => {
           const data = a.payload.doc.data();
           const id  = a.payload.doc.id;
           return {id, ...data};
-        })
-      })
+        }))
     );
   }
 
@@ -62,11 +60,11 @@ export class NoteService {
         note.id = id;
         return note;
       })
-    )
+    );
   }
 
   addNote(note: Note): Promise<DocumentReference> {
-    note.notifId = this.generateNotificationId(); 
+    note.notifId = this.generateNotificationId();
     return this.noteCollection.add(note);
   }
 
@@ -78,10 +76,10 @@ export class NoteService {
     return this.noteCollection.doc(note.id).update({
       title: note.title,
       body: note.body,
-      createdOn: note.createdOn, 
+      createdOn: note.createdOn,
       updatedOn: new Date(),
       colorTag: note.colorTag
-    })
+    });
   }
 
   generateNotificationId(){

@@ -21,4 +21,3 @@
 
 * Stores authentication token from notification service
 * Connects notification to note by notifId
-

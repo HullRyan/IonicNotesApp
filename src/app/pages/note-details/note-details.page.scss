@@ -1,16 +1,16 @@
 .cardfooter {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .has-cardfooter {
 padding-bottom: 15px;
 }
 
-ion-card-title {
-    padding-left: 15px;
-    padding-top: 15px;
+.ion-card-title {
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .min-max-width {
@@ -19,7 +19,7 @@ margin: 0 auto;
 }
 
 .card-max-width {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px, 20px, 20px, 20px;
+max-width: 800px;
+margin: 20px auto;
+padding: 20px, 20px, 20px, 20px;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { AuthenticateService } from './../../services/authenticate.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
@@ -11,22 +12,25 @@ import { Router } from '@angular/router';
 })
 export class RegisterPage implements OnInit {
 
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   validations_form: FormGroup;
-  errorMessage: string = "";
-  successMessage: string = "";
+  errorMessage = '';
+  successMessage = '';
 
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   validation_messages = {
-    'email':[
-      {type:"required", message: "Email is required"},
-      {type:"pattern", message: "Please enter a valid email"},
+    email:[
+      {type:'required', message: 'Email is required'},
+      {type:'pattern', message: 'Please enter a valid email'},
     ],
-    'password': [
-      {type:"required", message: "Password is required"},
-      {type:"minLength", message: "Password must be at least 6 characters"},
+    password: [
+      {type:'required', message: 'Password is required'},
+      {type:'minLength', message: 'Password must be at least 6 characters'},
     ]
   };
 
-  constructor(private authService: AuthenticateService, 
+  constructor(private authService: AuthenticateService,
               private alertCtrl: AlertController,
               private navCtrl: NavController,
               private formBuilder: FormBuilder,
@@ -43,40 +47,40 @@ export class RegisterPage implements OnInit {
         Validators.minLength(6)
       ])),
       name: new FormControl('')
-    })
+    });
   }
 
   tryRegister(value) {
     this.authService.registerUser(value).then(
       res => {
         let alertOptions = {
-          header: "Account created, please login.",
-          message: "For email: "+value.email,
+          header: 'Account created, please login.',
+          message: 'For email: '+value.email,
           buttons: ['ok']
-        }
+        };
         this.showAlert(alertOptions);
         this.authService.signIn(value).then(() => {
-          this.router.navigate(["/home"]);
+          this.router.navigate(['/home']);
         }).catch(() => {
-          let alertOptions = {
-            header: "Can't login",
-            message: "Error logging you in",
+          alertOptions = {
+            header: 'Can\'t login',
+            message: 'Error logging you in',
             buttons: ['ok']
           };
           this.showAlert(alertOptions);
         });
       }, err => {
         let alertOptions = {
-          header: "Cannot register",
+          header: 'Cannot register',
           message: err.message,
           buttons: ['ok']
         };
         this.showAlert(alertOptions);
       }
-    )
+    );
   }
   async showAlert(options){
-    let alertDialog = await this.alertCtrl.create(options);
+    const alertDialog = await this.alertCtrl.create(options);
     return await alertDialog.present();
   }
 
