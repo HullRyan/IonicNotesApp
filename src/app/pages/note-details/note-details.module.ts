@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { NoteDetailsPageRoutingModule } from './note-details-routing.module';
 
 import { NoteDetailsPage } from './note-details.page';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NoteDetailsPageRoutingModule
+    NoteDetailsPageRoutingModule,
+    QuillModule.forRoot(),
   ],
   declarations: [NoteDetailsPage]
 })

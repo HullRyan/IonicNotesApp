@@ -1,36 +1,35 @@
+/* eslint-disable prefer-const */
+import { promise } from 'selenium-webdriver';
 import { TestBed } from '@angular/core/testing';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthenticateService } from './authenticate.service';
 
 describe('AuthenticateService', () => {
-  let service: AuthenticateService;
+  let mockAuthService: any;
+  mockAuthService = jasmine.createSpyObj('authService', ['signOut']);
+  mockAuthService.signOut.and.returnValue(Promise.resolve(true));
 
-  beforeEach(() => {
+  beforeEach( async () => {
     const angularFireAuthStub = () => ({ signOut: () => ({}) });
     const angularFirestoreStub = () => ({ collection: () => ({}) });
     TestBed.configureTestingModule({
       providers: [
-        AuthenticateService,
+        { provide: AuthenticateService, useValue: mockAuthService },
         { provide: AngularFireAuth, useFactory: angularFireAuthStub },
         { provide: AngularFirestore, useFactory: angularFirestoreStub }
       ]
-    });
-    service = TestBed.inject(AuthenticateService);
+    }).compileComponents();
   });
 
   it('can load instance', () => {
-    expect(service).toBeTruthy();
+    expect(mockAuthService).toBeTruthy();
   });
 
   describe('signOut', () => {
     it('makes expected calls', () => {
-      const angularFireAuthStub: AngularFireAuth = TestBed.inject(
-        AngularFireAuth
-      );
-      spyOn(angularFireAuthStub, 'signOut').and.callThrough();
-      service.signOut();
-      expect(angularFireAuthStub.signOut).toHaveBeenCalled();
+      mockAuthService.signOut();
+      expect(mockAuthService.signOut).toHaveBeenCalled();
     });
   });
 });

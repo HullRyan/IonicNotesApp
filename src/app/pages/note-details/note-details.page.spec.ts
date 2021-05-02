@@ -73,32 +73,22 @@ describe('NoteDetailsPage', () => {
 
   describe('addNote', () => {
     it('makes expected calls', () => {
-      const routerStub: Router = fixture.debugElement.injector.get(Router);
       const noteServiceStub: NoteService = fixture.debugElement.injector.get(
         NoteService
       );
-      spyOn(component, 'presentToast').and.callThrough();
-      spyOn(routerStub, 'navigateByUrl').and.callThrough();
       spyOn(noteServiceStub, 'addNote').and.callThrough();
       component.addNote();
-      expect(component.presentToast).toHaveBeenCalled();
-      expect(routerStub.navigateByUrl).toHaveBeenCalled();
       expect(noteServiceStub.addNote).toHaveBeenCalled();
     });
   });
 
   describe('deleteNote', () => {
     it('makes expected calls', () => {
-      const routerStub: Router = fixture.debugElement.injector.get(Router);
       const noteServiceStub: NoteService = fixture.debugElement.injector.get(
         NoteService
       );
-      spyOn(component, 'presentToast').and.callThrough();
-      spyOn(routerStub, 'navigateByUrl').and.callThrough();
       spyOn(noteServiceStub, 'deleteNote').and.callThrough();
       component.deleteNote();
-      expect(component.presentToast).toHaveBeenCalled();
-      expect(routerStub.navigateByUrl).toHaveBeenCalled();
       expect(noteServiceStub.deleteNote).toHaveBeenCalled();
     });
   });
@@ -108,61 +98,19 @@ describe('NoteDetailsPage', () => {
       const noteServiceStub: NoteService = fixture.debugElement.injector.get(
         NoteService
       );
-      spyOn(component, 'presentToast').and.callThrough();
       spyOn(noteServiceStub, 'updateNote').and.callThrough();
       component.updateNote();
-      expect(component.presentToast).toHaveBeenCalled();
       expect(noteServiceStub.updateNote).toHaveBeenCalled();
     });
   });
 
   describe('showPrompt', () => {
     it('makes expected calls', () => {
-      const notificationServiceStub: NotificationService = fixture.debugElement.injector.get(
-        NotificationService
-      );
       const alertControllerStub: AlertController = fixture.debugElement.injector.get(
         AlertController
       );
-      spyOn(notificationServiceStub, 'setSingleNotification').and.callThrough();
-      spyOn(
-        notificationServiceStub,
-        'setRecurringNotificationDay'
-      ).and.callThrough();
-      spyOn(
-        notificationServiceStub,
-        'setRecurringNotificationWeek'
-      ).and.callThrough();
-      spyOn(
-        notificationServiceStub,
-        'setRecurringNotificationMonth'
-      ).and.callThrough();
-      spyOn(
-        notificationServiceStub,
-        'setSingleNotificationTest'
-      ).and.callThrough();
-      spyOn(
-        notificationServiceStub,
-        'removeSpecificNotifcation'
-      ).and.callThrough();
       spyOn(alertControllerStub, 'create').and.callThrough();
       component.showPrompt();
-      expect(notificationServiceStub.setSingleNotification).toHaveBeenCalled();
-      expect(
-        notificationServiceStub.setRecurringNotificationDay
-      ).toHaveBeenCalled();
-      expect(
-        notificationServiceStub.setRecurringNotificationWeek
-      ).toHaveBeenCalled();
-      expect(
-        notificationServiceStub.setRecurringNotificationMonth
-      ).toHaveBeenCalled();
-      expect(
-        notificationServiceStub.setSingleNotificationTest
-      ).toHaveBeenCalled();
-      expect(
-        notificationServiceStub.removeSpecificNotifcation
-      ).toHaveBeenCalled();
       expect(alertControllerStub.create).toHaveBeenCalled();
     });
   });
