@@ -18,7 +18,7 @@ describe('HomePage', () => {
     const navControllerStub = () => ({});
     const alertControllerStub = () => ({});
     const authenticateServiceStub = () => ({
-      signIn: value => ({ then: () => ({}) })
+      signIn: (value) => ({ then: () => ({}) }),
     });
     const routerStub = () => ({ navigate: () => ({}) });
     const noteServiceStub = () => ({ refreshNotesCollection: () => ({}) });
@@ -31,8 +31,8 @@ describe('HomePage', () => {
         { provide: NavController, useFactory: navControllerStub },
         { provide: AlertController, useFactory: alertControllerStub },
         { provide: AuthenticateService, useFactory: authenticateServiceStub },
-        { provide: NoteService, useFactory: noteServiceStub }
-      ]
+        { provide: NoteService, useFactory: noteServiceStub },
+      ],
     });
     fixture = TestBed.createComponent(HomePage);
     component = fixture.componentInstance;

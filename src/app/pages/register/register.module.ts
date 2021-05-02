@@ -14,8 +14,8 @@ import { RegisterPage } from './register.page';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    RegisterPageRoutingModule
+    RegisterPageRoutingModule,
   ],
-  declarations: [RegisterPage]
+  declarations: [RegisterPage],
 })
 export class RegisterPageModule {}

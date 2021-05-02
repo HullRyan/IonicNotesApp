@@ -9,12 +9,7 @@ import { NotesListPageRoutingModule } from './notes-list-routing.module';
 import { NotesListPage } from './notes-list.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    NotesListPageRoutingModule
-  ],
-  declarations: [NotesListPage]
+  imports: [CommonModule, FormsModule, IonicModule, NotesListPageRoutingModule],
+  declarations: [NotesListPage],
 })
 export class NotesListPageModule {}

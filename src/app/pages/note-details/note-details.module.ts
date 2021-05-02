@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { NoteDetailsPageRoutingModule } from './note-details-routing.module';
 
 import { NoteDetailsPage } from './note-details.page';
-import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   imports: [
@@ -15,8 +14,7 @@ import { QuillModule } from 'ngx-quill';
     FormsModule,
     IonicModule,
     NoteDetailsPageRoutingModule,
-    QuillModule.forRoot(),
   ],
-  declarations: [NoteDetailsPage]
+  declarations: [NoteDetailsPage],
 })
 export class NoteDetailsPageModule {}

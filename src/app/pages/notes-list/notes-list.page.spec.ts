@@ -11,7 +11,7 @@ describe('NotesListPage', () => {
   let fixture: ComponentFixture<NotesListPage>;
 
   beforeEach(() => {
-    const routerStub = () => ({ navigate: array => ({ then: () => ({}) }) });
+    const routerStub = () => ({ navigate: (array) => ({ then: () => ({}) }) });
     const authenticateServiceStub = () => ({ signOut: () => ({}) });
     const noteServiceStub = () => ({ getNotes: () => ({}) });
     TestBed.configureTestingModule({
@@ -20,8 +20,8 @@ describe('NotesListPage', () => {
       declarations: [NotesListPage],
       providers: [
         { provide: AuthenticateService, useFactory: authenticateServiceStub },
-        { provide: NoteService, useFactory: noteServiceStub }
-      ]
+        { provide: NoteService, useFactory: noteServiceStub },
+      ],
     });
     fixture = TestBed.createComponent(NotesListPage);
     component = fixture.componentInstance;

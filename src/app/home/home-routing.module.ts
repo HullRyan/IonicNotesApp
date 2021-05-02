@@ -5,20 +5,26 @@ import { HomePage } from './home.page';
 const routes: Routes = [
   {
     path: '',
-    component: HomePage
+    component: HomePage,
   },
   {
     path: 'notes',
-    loadChildren: () => import('../pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
+    loadChildren: () =>
+      import('../pages/note-details/note-details.module').then(
+        (m) => m.NoteDetailsPageModule
+      ),
   },
   {
     path: 'note/:id',
-    loadChildren: () => import('../pages/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
-  }
+    loadChildren: () =>
+      import('../pages/note-details/note-details.module').then(
+        (m) => m.NoteDetailsPageModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class HomePageRoutingModule {}

@@ -9,10 +9,10 @@ describe('NoteService', () => {
 
   beforeEach(() => {
     const authenticateServiceStub = () => ({
-      getCurrentUser: () => ({ uid: {} })
+      getCurrentUser: () => ({ uid: {} }),
     });
     const angularFirestoreStub = () => ({
-      collection: () => ({ doc: () => ({ collection: () => ({}) }) })
+      collection: () => ({ doc: () => ({ collection: () => ({}) }) }),
     });
     const angularFireAuthStub = () => ({});
     TestBed.configureTestingModule({
@@ -20,8 +20,8 @@ describe('NoteService', () => {
         NoteService,
         { provide: AuthenticateService, useFactory: authenticateServiceStub },
         { provide: AngularFirestore, useFactory: angularFirestoreStub },
-        { provide: AngularFireAuth, useFactory: angularFireAuthStub }
-      ]
+        { provide: AngularFireAuth, useFactory: angularFireAuthStub },
+      ],
     });
     spyOn(NoteService.prototype, 'refreshNotesCollection');
     service = TestBed.inject(NoteService);

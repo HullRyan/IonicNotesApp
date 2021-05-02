@@ -7,17 +7,17 @@ describe('NotificationService', () => {
 
   beforeEach(() => {
     const localNotificationsStub = () => ({
-      isPresent: alertId => ({}),
-      cancel: alertId => ({}),
-      schedule: object => ({}),
+      isPresent: (alertId) => ({}),
+      cancel: (alertId) => ({}),
+      schedule: (object) => ({}),
       getAllScheduled: () => ({}),
-      cancelAll: () => ({})
+      cancelAll: () => ({}),
     });
     TestBed.configureTestingModule({
       providers: [
         NotificationService,
-        { provide: LocalNotifications, useFactory: localNotificationsStub }
-      ]
+        { provide: LocalNotifications, useFactory: localNotificationsStub },
+      ],
     });
     service = TestBed.inject(NotificationService);
   });

@@ -22,10 +22,15 @@ import { Storage } from '@ionic/storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-  AngularFireModule.initializeApp(environment.firebase),
-  FormsModule,
-  AngularFirestoreModule, AngularFireAuthModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    FormsModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -33,7 +38,7 @@ import { Storage } from '@ionic/storage';
     FormBuilder,
     Storage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: SETTINGS, useValue: {} }
+    { provide: SETTINGS, useValue: {} },
   ],
   bootstrap: [AppComponent],
 })

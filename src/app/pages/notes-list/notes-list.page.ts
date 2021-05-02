@@ -10,27 +10,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes-list.page.scss'],
 })
 export class NotesListPage implements OnInit {
-
   private notes: Observable<Note[]>;
 
-  constructor(private noteService: NoteService,
-              private authService: AuthenticateService,
-              private router: Router) { }
+  constructor(
+    private noteService: NoteService,
+    private authService: AuthenticateService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.notes = this.noteService.getNotes();
   }
 
-  getShortBody(body: string){
-    if (body.length > 40){
+  getShortBody(body: string) {
+    if (body.length > 40) {
       body = body.substr(0, 40) + '...';
     }
     return body;
   }
 
-  signout(){
+  signout() {
     this.authService.signOut();
     this.router.navigate(['home']).then(() => window.location.reload());
   }
-
 }

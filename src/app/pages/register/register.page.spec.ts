@@ -14,15 +14,15 @@ describe('RegisterPage', () => {
 
   beforeEach(() => {
     const authenticateServiceStub = () => ({
-      registerUser: value => ({ then: () => ({}) }),
-      signIn: value => ({ then: () => ({ catch: () => ({}) }) })
+      registerUser: (value) => ({ then: () => ({}) }),
+      signIn: (value) => ({ then: () => ({ catch: () => ({}) }) }),
     });
-    const formBuilderStub = () => ({ group: object => ({}) });
+    const formBuilderStub = () => ({ group: (object) => ({}) });
     const navControllerStub = () => ({});
     const alertControllerStub = () => ({
-      create: options => ({ present: () => ({}) })
+      create: (options) => ({ present: () => ({}) }),
     });
-    const routerStub = () => ({ navigate: array => ({}) });
+    const routerStub = () => ({ navigate: (array) => ({}) });
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       schemas: [NO_ERRORS_SCHEMA],
@@ -31,8 +31,8 @@ describe('RegisterPage', () => {
         { provide: AuthenticateService, useFactory: authenticateServiceStub },
         { provide: FormBuilder, useFactory: formBuilderStub },
         { provide: NavController, useFactory: navControllerStub },
-        { provide: AlertController, useFactory: alertControllerStub }
-      ]
+        { provide: AlertController, useFactory: alertControllerStub },
+      ],
     });
     fixture = TestBed.createComponent(RegisterPage);
     component = fixture.componentInstance;
