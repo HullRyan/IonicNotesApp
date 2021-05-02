@@ -40,8 +40,8 @@ export class NoteDetailsPage implements OnInit {
 
   addNote() {
     this.noteService.addNote(this.note).then(() => {
-      this.router.navigateByUrl('notes');
       this.presentToast('Note created!');
+      this.router.navigateByUrl('notes');
     }, error => {
       this.presentToast('Error creating note!');
     });
@@ -49,10 +49,10 @@ export class NoteDetailsPage implements OnInit {
 
   deleteNote() {
     this.noteService.deleteNote(this.note.id).then(() => {
-      this.router.navigateByUrl('notes');
       this.presentToast('Note deleted!');
+      this.router.navigateByUrl('notes');
     }, error => {
-      this.presentToast('Error deleting note!');
+      //this.presentToast('Error deleting note!');
     });
   }
 

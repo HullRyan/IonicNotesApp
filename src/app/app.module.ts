@@ -27,12 +27,12 @@ import { Storage } from '@ionic/storage';
   FormsModule,
   AngularFirestoreModule, AngularFireAuthModule],
   providers: [
-    StatusBar, 
+    StatusBar,
     SplashScreen,
     LocalNotifications,
     FormBuilder,
     Storage,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: SETTINGS, useValue: {} }
   ],
   bootstrap: [AppComponent],
