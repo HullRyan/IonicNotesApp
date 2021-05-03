@@ -12,7 +12,10 @@ export interface notifcation {
   providedIn: 'root',
 })
 export class NotificationService {
-  constructor(private localNotifications: LocalNotifications) {}
+  constructor(
+    private localNotifications: LocalNotifications
+  )
+  {}
 
   setSingleNotification(noteTitle: string, time: number, alertId: number) {
     if (this.localNotifications.isPresent(alertId)) {
@@ -26,6 +29,7 @@ export class NotificationService {
         '.\nClick here to open!',
       trigger: { at: new Date(new Date().getTime() + time) },
       led: 'FF0000',
+      //icon: ''
     });
   }
 
@@ -41,6 +45,7 @@ export class NotificationService {
         '.\nClick here to open!',
       trigger: { every: ELocalNotificationTriggerUnit.DAY },
       led: 'FF0000',
+      //icon: ''
     });
   }
 
@@ -56,6 +61,7 @@ export class NotificationService {
         '.\nClick here to open!',
       trigger: { every: ELocalNotificationTriggerUnit.WEEK },
       led: 'FF0000',
+      //icon: ''
     });
   }
 
@@ -71,6 +77,7 @@ export class NotificationService {
         '.\nClick here to open!',
       trigger: { every: ELocalNotificationTriggerUnit.MONTH },
       led: 'FF0000',
+      //icon: ''
     });
   }
 
@@ -100,6 +107,7 @@ export class NotificationService {
         '.\nClick here to open!',
       trigger: { at: new Date(new Date().getTime() + 5000) },
       led: 'FF0000',
+      //icon: ''
     });
   }
 }
