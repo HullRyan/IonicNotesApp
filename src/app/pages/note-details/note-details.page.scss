@@ -23,3 +23,29 @@ max-width: 800px;
 margin: 20px auto;
 padding: 20px, 20px, 20px, 20px;
 }
+
+.special {
+  position:absolute; 
+  top: 0; 
+  right:0;
+}
+
+.bold {
+  font-size: large;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: large;
+  padding-left: 0;
+}
+
+
+ion-card-content {
+  min-height: 200px;
+}
+
+ion-button {
+  z-index: 4;
+}

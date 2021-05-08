@@ -1,11 +1,10 @@
-
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -13,3 +12,101 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.ion-color-vibrant {
+  --ion-color-base: #f39c12;
+  --ion-color-base-rgb: 255, 255, 0;
+  --ion-color-contrast: #000000;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #e0e000;
+  --ion-color-tint: #ffff1a;
+}
+
+.ion-color-green {
+  --ion-color-base: #66bb6a;
+  --ion-color-base-rgb: 39, 174, 96;
+  --ion-color-contrast: #f8f8f8;
+  --ion-color-contrast-rgb: 39, 174, 96;
+  --ion-color-shade: #27ae60;
+  --ion-color-tint: #27ae60;
+}
+
+.ion-color-blue {
+  --ion-color-base: #42a5f5;
+  --ion-color-base-rgb: 39, 174, 96;
+  --ion-color-contrast: #f8f8f8;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d7d8da;
+  --ion-color-tint: #f5f6f9;
+}
+
+.ion-color-purple {
+  --ion-color-base: #ab47bc;
+  --ion-color-base-rgb: 39, 174, 96;
+  --ion-color-contrast: #f8f8f8;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d7d8da;
+  --ion-color-tint: #f5f6f9;
+}
+
+.ion-color-orange {
+  --ion-color-base: #ff7043;
+  --ion-color-base-rgb: 39, 174, 96;
+  --ion-color-contrast: #f8f8f8;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d7d8da;
+  --ion-color-tint: #f5f6f9;
+}
+
+.ion-color-yellow {
+  --ion-color-base: #f3c412;
+  --ion-color-base-rgb: 255, 152, 0;
+  --ion-color-contrast: #f8f8f8;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d7d8da;
+  --ion-color-tint: #f5f6f9;
+}
+
+.ion-color-red {
+  --ion-color-base: #f44336;
+  --ion-color-contrast: #f8f8f8;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d7d8da;
+  --ion-color-tint: #f5f6f9;
+}
+
+.ql-toolbar.ql-snow {
+  border-color: transparent !important;
+  border-bottom: solid #2d2d2a 1px !important;
+}
+
+.ql-container.ql-snow {
+  border-color: transparent !important;
+  border-bottom: solid #2d2d2a 1px !important;
+}
+
+.ql-toolbar .ql-stroke {
+  fill: none !important;
+  stroke: #989aa2 !important;
+}
+
+.ql-toolbar .ql-fill {
+  fill: #989aa2 !important;
+  stroke: none !important;
+}
+
+.ql-toolbar .ql-picker {
+  color: #989aa2 !important;
+}
+
+.ql-tooltip {
+  z-index: 9;
+}
+
+.ql-editor {
+  min-height: 200px;
+}
+
+.ql-editor.ql-blank::before {
+  color: #d7d8da;
+}

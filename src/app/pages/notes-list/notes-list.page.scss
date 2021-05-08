@@ -1,4 +1,27 @@
 ion-card-header {
-    font-weight: bold;
-    font-size: large;
+  font-weight: bold;
+  font-size: large;
+}
+
+/** Custom note colors **/
+.red {
+  color: #b71c1c;
+}
+
+.ion-color-green {
+  --ion-color-grean: #27ae60;
+  --ion-color-grean-rgb: 39, 174, 96;
+  --ion-color-green-contrast: #2d2d2a;
+  --ion-color-green-contrast-rgb: 0, 0, 0;
+  --ion-color-green-shade: #d7d8da;
+  --ion-color-green-tint: #f5f6f9;
+}
+
+ion-card-content {
+  padding-top: 16px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: large;
 }

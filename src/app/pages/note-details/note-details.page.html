@@ -12,21 +12,22 @@
 
 <ion-content fullscreen>
   <ion-card class="card-max-width">
+    <ion-card-header color={{note.colorTag}}>
     <ion-card-title>
       <ion-input
         [(ngModel)]="note.title"
-        maxLength="20"
+        maxLength="30"
         placeholder="Name"
+        class="bold"
       ></ion-input>
+      <ion-button fill="clear" class="special" (click)="showColorPrompt()">       
+        <ion-icon name="color-palette" color="dark"></ion-icon>
+    </ion-button>
     </ion-card-title>
-    <ion-card-content>
-      <ion-textarea
-        [(ngModel)]="note.body"
-        auto-grow="true"
-        placeholder="Notes"
-      ></ion-textarea>
-    </ion-card-content>
-
+  </ion-card-header>
+      <quill-editor 
+        [(ngModel)]="note.body" [bounds]="'self'" placeholder=" "
+      ></quill-editor>
     <ion-footer *ngIf="!note.id">
       <ion-toolbar color="success">
         <ion-button
@@ -46,7 +47,7 @@
         <ion-col size="6">
           <ion-button
             expand="block"
-            fill="outline"
+            fill="solid"
             color="danger"
             (click)="deleteNote()"
           >
@@ -57,8 +58,8 @@
         <ion-col size="6">
           <ion-button
             expand="block"
-            fill="outline"
-            color="success"
+            fill="solid"
+            color="green"
             (click)="updateNote()"
           >
             <ion-icon name="save" slot="start"></ion-icon>

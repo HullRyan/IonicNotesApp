@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { QuillModule } from 'ngx-quill';
+
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
@@ -25,6 +27,23 @@ import { Storage } from '@ionic/storage';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    QuillModule.forRoot({
+      modules: {
+        toolbar: [
+          ['bold', 'italic', 'underline', 'strike'], // toggled buttons
+          ['code-block'],
+          [{ header: 1 }, { header: 2 }], // custom button values
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+          [{ font: [] }],
+          [{ align: ['', 'center', 'justify', 'right'] }],
+
+          ['clean'], // remove formatting button
+
+          ['link', 'image'], // link and image, video
+        ],
+      },
+    }),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
