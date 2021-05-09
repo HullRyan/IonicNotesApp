@@ -149,8 +149,9 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
   - Tested UI on platforms with varying sizes (Web, Android, iOS, Windows)
 - Review: Missing functionality for complex data in note,  notification control and settings
   - Added user stories based on feedback
-    - Needed: Notifications view page
+    - Needed: Color tag functionality and control  
     - Needed: Advanced Text Editor in place for Note body
+    - Needed: Notifications view page
     - Needed: Updated database collection and fields for search and sorting
 
 ### Sprint 3: (4/27/2021 - 5/5/2021) :eyes:
@@ -158,17 +159,21 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 - Plan: Markdown Notes App with advanced Notification Integration
   - Features extracted from user stories:
     - Markdown Editor for Note body
-    - Notifications list page
-    - Notes list sort/ search
+    - Note colors customization
 - Design: Sprint 2 UI Base    (Current Stage - 4/27/2021 :pushpin:)
   - Login/ Home page
   - Register page
   - Notes List page
   - Note Details/ Edit Page
-  - Settings Tab
-    - Account functions
-    - Notification List Page
-
+- Development: Implement Quill Rich Text Editor
+  - Custom toolbar for wanted features
+  - Add color tag functions
+  - Update notes list
+- Testing: Repeat Unit Tests
+- Review: Missing notification control and settings, note organization
+   - Needed: Notifications view page
+   - Needed: Updated database collection and fields for search and sorting
+ 
 ## Testing Process
 See Spec files for testing processes and functions.
 
