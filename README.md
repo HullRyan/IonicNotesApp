@@ -154,13 +154,13 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
     - Needed: Notifications view page
     - Needed: Updated database collection and fields for search and sorting
 
-### Sprint 3: (4/27/2021 - 5/5/2021) :eyes:
+### Sprint 3: (4/27/2021 - 5/8/2021) :heavy_check_mark:
 
 - Plan: Markdown Notes App with advanced Notification Integration
   - Features extracted from user stories:
     - Markdown Editor for Note body
     - Note colors customization
-- Design: Sprint 2 UI Base    (Current Stage - 4/27/2021 :pushpin:)
+- Design: Sprint 2 UI Base    
   - Login/ Home page
   - Register page
   - Notes List page
