@@ -1,11 +1,10 @@
-import { ModalController } from '@ionic/angular';
 /* eslint-disable eqeqeq */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NoteService, Note } from 'src/app/services/note.service';
 import { NotificationService } from 'src/app/services/notification.service';
 import { ToastController, AlertController } from '@ionic/angular';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-note-details',
@@ -30,8 +29,7 @@ export class NoteDetailsPage implements OnInit {
     private toastCtrl: ToastController,
     private router: Router,
     private notificationService: NotificationService,
-    private alertController: AlertController,
-    public modalController: ModalController
+    private alertController: AlertController
   ) {}
 
   ngOnInit() {

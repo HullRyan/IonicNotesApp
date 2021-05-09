@@ -1,4 +1,4 @@
-import { NotesListPageRoutingModule } from './../notes-list/notes-list-routing.module';
+
 import { QuillModule } from 'ngx-quill';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

@@ -37,9 +37,7 @@ import { Storage } from '@ionic/storage';
           [{ color: [] }, { background: [] }], // dropdown with defaults from theme
           [{ font: [] }],
           [{ align: ['', 'center', 'justify', 'right'] }],
-
           ['clean'], // remove formatting button
-
           ['link', 'image'], // link and image, video
         ],
       },

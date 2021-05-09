@@ -3,7 +3,6 @@ import { AuthenticateService } from './../../services/authenticate.service';
 import { Observable } from 'rxjs';
 import { NoteService, Note } from './../../services/note.service';
 import { Component, OnInit } from '@angular/core';
-import { HtmlParser } from '@angular/compiler';
 import { MenuController } from '@ionic/angular';
 
 @Component({
