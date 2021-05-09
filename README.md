@@ -102,7 +102,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 
 ### Agile Methodology
 
-### Sprint 1: (4/8/2021 - 4/19/2021) :heavy_check_mark
+### Sprint 1: (4/8/2021 - 4/19/2021) :heavy_check_mark:
 
 - Plan: Local Notes and Reminders App
   - Features extracted from user stories:
@@ -125,7 +125,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
     - Needed: Responsive UI vs current Static UI
     - Needed: Cloud database for notes
 
-### Sprint 2: (4/19/2021 - 4/27/2021) :heavy_check_mark
+### Sprint 2: (4/19/2021 - 4/27/2021) :heavy_check_mark:
 
 - Plan: Cloud Notes App with Reminders
   - Features extracted from user stories:
@@ -153,7 +153,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
     - Needed: Advanced Text Editor in place for Note body
     - Needed: Updated database collection and fields for search and sorting
 
-### Sprint 3: (4/27/2021 - 5/5/2021) :eyes
+### Sprint 3: (4/27/2021 - 5/5/2021) :eyes:
 
 - Plan: Markdown Notes App with advanced Notification Integration
   - Features extracted from user stories:
