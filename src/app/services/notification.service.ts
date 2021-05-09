@@ -18,7 +18,7 @@ export class NotificationService {
   {}
 
   setSingleNotification(noteTitle: string, time: number, alertId: number) {
-    if (this.localNotifications.isPresent(alertId)) {
+    if (this.localNotifications.isScheduled(alertId)) {
       this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
@@ -34,7 +34,7 @@ export class NotificationService {
   }
 
   setRecurringNotificationDay(noteTitle: string, alertId: number) {
-    if (this.localNotifications.isPresent(alertId)) {
+    if (this.localNotifications.isScheduled(alertId)) {
       this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
@@ -50,7 +50,7 @@ export class NotificationService {
   }
 
   setRecurringNotificationWeek(noteTitle: string, alertId: number) {
-    if (this.localNotifications.isPresent(alertId)) {
+    if (this.localNotifications.isScheduled(alertId)) {
       this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
@@ -66,7 +66,7 @@ export class NotificationService {
   }
 
   setRecurringNotificationMonth(noteTitle: string, alertId: number) {
-    if (this.localNotifications.isPresent(alertId)) {
+    if (this.localNotifications.isScheduled(alertId)) {
       this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({
@@ -85,8 +85,14 @@ export class NotificationService {
     return this.localNotifications.getAllScheduled();
   }
 
+  getSPecificScheduledNotifications(alertId: number) {
+    if (this.localNotifications.isScheduled(alertId)) {
+    return this.localNotifications.get(alertId);
+    }
+  }
+
   removeSpecificNotifcation(alertId: number) {
-    if (this.localNotifications.isPresent(alertId)) {
+    if (this.localNotifications.isScheduled(alertId)) {
       this.localNotifications.cancel(alertId);
     }
   }
@@ -96,7 +102,7 @@ export class NotificationService {
   }
 
   setSingleNotificationTest(noteTitle: string, alertId: number) {
-    if (this.localNotifications.isPresent(alertId)) {
+    if (this.localNotifications.isScheduled(alertId)) {
       this.localNotifications.cancel(alertId);
     }
     this.localNotifications.schedule({

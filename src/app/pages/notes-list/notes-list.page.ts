@@ -12,7 +12,7 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./notes-list.page.scss'],
 })
 export class NotesListPage implements OnInit {
-  private notes: Observable<Note[]>;
+  public notes: Observable<Note[]>;
 
   constructor(
     private noteService: NoteService,

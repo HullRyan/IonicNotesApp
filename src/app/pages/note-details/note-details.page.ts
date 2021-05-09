@@ -95,6 +95,14 @@ export class NoteDetailsPage implements OnInit {
     );
   }
 
+  getAllNotifications() {
+    console.log(this.notificationService.getScheduledNotifications());
+  }
+
+  getSingleNotification(alertId: number) {
+    console.log(this.notificationService.getSPecificScheduledNotifications(alertId));
+  }
+
   showColorPrompt() {
     this.alertController
       .create({
@@ -165,7 +173,7 @@ export class NoteDetailsPage implements OnInit {
                 this.note.colorTag = '';
               }
               if (data == 'red') {
-                this.note.colorTag = 'danger';
+                this.note.colorTag = 'red';
               }
               console.log('Selected Information', data);
               if (this.note.id) {
@@ -217,13 +225,18 @@ export class NoteDetailsPage implements OnInit {
           },
           {
             type: 'radio',
-            label: 'Clear Notifications',
+            label: 'Clear Notification',
             value: '7',
           },
           {
             type: 'radio',
             label: 'Show All Notifications',
             value: '8',
+          },
+          {
+            type: 'radio',
+            label: 'Show This Notes Notifications',
+            value: '9',
           },
         ],
         buttons: [
@@ -282,6 +295,10 @@ export class NoteDetailsPage implements OnInit {
               if (data == 8) {
                 console.log(this.notificationService.getScheduledNotifications);
               }
+              if (data == 9) {
+                console.log(this.notificationService.getScheduledNotifications);
+              }
+
               console.log('Selected Information', data);
             },
           },
