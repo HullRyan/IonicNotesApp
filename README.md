@@ -170,7 +170,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
     - Notification List Page
 
 ## Testing Process
-
+* See Spec files for testing processes and functions.
 |Unit Testing using Karma and Jasmine|
 |-------|
 |![Testing](/resources/screenshots/Testing.PNG)|
