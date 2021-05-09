@@ -172,3 +172,4 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 ## Testing Process
 
 - Unit Testing using Karma and Jasmine
+![Testing](/resources/screenshots/Testing.png)
