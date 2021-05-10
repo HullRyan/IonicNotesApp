@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "Ionic Notes App",
+  "appName": "IonicNotesApp",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
