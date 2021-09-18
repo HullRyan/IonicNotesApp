@@ -49,7 +49,7 @@ This application is a project for ITSC 3155 Software Engineering at UNC Charlott
 1. Clone repository `git clone https://github.com/HullRyan/IonicNotesApp`
 2. Create Google Firebase Project and Firestore Database
 3. Create collections for users, notes. See [DATABASE.md](DATABASE.md)
-4. Create and place your Firebase SDK Config snippet into [/src/environments/envoironments.ts]()
+4. Create and place your Firebase SDK Config snippet into [/src/environments/environment.ts]()
 5. Run `npm install` from root to install dependencies
 6. Run `ionic serve` or build to desired platform with `ionic build` and deploy
 7. Enjoy :notebook::pencil2:
